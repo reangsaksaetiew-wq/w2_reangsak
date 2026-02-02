@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'rectangle.dart';
-import 'percent.dart';
+import 'perimeter_triangle.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => MyHomePage(),
         '/rectangle' : (context) => Rectangle(),
-        '/percent' : (context) => Percent(),
+        '/perimeter_triangle' : (context) => Triangle(),
       },
       initialRoute: '/',
 
@@ -47,7 +47,7 @@ class MyHomePage extends StatelessWidget {
                 style:  TextButton.styleFrom(
                   backgroundColor:  Colors.blueAccent,
                   foregroundColor:  Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -56,16 +56,16 @@ class MyHomePage extends StatelessWidget {
               ),
               SizedBox(height: 30,),
               TextButton(
-                onPressed: () => Navigator.pushNamed(context, '/percent'),
+                onPressed: () => Navigator.pushNamed(context, '/perimeter_triangle'),
                 style:  TextButton.styleFrom(
                   backgroundColor:  Colors.blueGrey,
                   foregroundColor:  Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 110, vertical: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                 ),
-                child: Text("คำนวณเปอร์เซ็นต์",style: TextStyle(fontSize: 20),),
+                child: Text("คำนวณเส้นรอบรูปสามเหลี่ยมหน้าจั่ว",style: TextStyle(fontSize: 20),),
               ),
             ],
           )
